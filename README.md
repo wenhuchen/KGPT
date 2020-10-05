@@ -5,6 +5,16 @@ Code and Data for EMNLP2020 Paper "KGPT: Knowledge-Grounded Pre-Training for Dat
 <img src="overview.png" width="350">
 </p>
 
+Sequence Encoder:
+<p align="center">
+<img src="sequence_encoder.png" width="700">
+</p>
+
+Graph Encoder:
+<p align="center">
+<img src="graph_encoder.png" width="700">
+</p>
+
 
 ## Download Preprocessed Dataset
 ```
