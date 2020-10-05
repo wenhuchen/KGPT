@@ -1,0 +1,25 @@
+2020-05-24.15-09-41 l
+2020-05-24.15-09-49 cp train_gated_e2enlg_gpt2.sh train_gated_e2enlg_gpt2_few_shot.sh
+2020-05-24.15-10-16 vim train_gated_e2enlg_gpt2_few_shot.sh
+2020-05-24.15-10-48 vim train_gated_e2enlg_gpt2_few_shot.sh ../webnlg/train_gated_webnlg_gpt2_fewshot.sh 
+2020-05-24.15-25-46 l
+2020-05-24.15-25-54 cp train_gated_e2enlg_gpt2.sh train_gated_e2enlg_gpt2_few_shot.sh
+2020-05-24.15-27-15 vim train_gated_e2enlg_gpt2_few_shot.sh
+2020-05-24.15-27-27 vim finetune_gated_e2enlg_from_wikidata_gpt2.sh 
+2020-05-24.15-27-48 vim finetune_gated_e2enlg_from_wikidata_gpt2.sh
+2020-05-24.15-28-04 vim train_gated_e2enlg_gpt2_few_shot.sh
+2020-05-24.15-28-13 cp finetune_gated_e2enlg_from_wikidata_gpt2.sh finetune_gated_e2enlg_from_wikidata_gpt2_few_shot.sh
+2020-05-24.15-29-11 vim finetune_gated_e2enlg_from_wikidata_gpt2_few_shot.sh
+2020-05-24.15-30-34 vim finetune_gated_e2enlg_from_wikidata_gpt2_few_shot.sh
+2020-06-01.22-06-53 l
+2020-06-01.22-07-29 mv finetune_gated_e2enlg_from_wikidata_gpt2_few_shot.sh finetune_gated_e2enlg_from_wikidata_gpt2_fewshot.sh
+2020-06-01.22-07-42 mv train_gated_e2enlg_gpt2_few_shot.sh train_gated_e2enlg_gpt2_fewshot.sh
+2020-06-01.22-07-43 l
+2020-06-01.22-07-51 mv finetune_gated_e2enlg_from_wikidata_gpt2_fewshot.sh finetune_sequence_e2enlg_from_wikidata_gpt2_fewshot.sh
+2020-06-01.22-07-56 mv train_gated_e2enlg_gpt2_fewshot.sh train_sequence_e2enlg_gpt2_fewshot.sh
+2020-06-01.22-07-57 l
+2020-06-01.22-08-01 git add finetune_sequence_e2enlg_from_wikidata_gpt2_fewshot.sh train_sequence_e2enlg_gpt2_fewshot.sh
+2020-06-01.22-08-06 git pull
+2020-06-01.22-08-07 l
+2020-06-01.22-08-19 git commit -a -m 'adding script for e2e few shot'
+2020-06-01.22-08-24 git push

@@ -1,0 +1,16 @@
+2020-05-28.23-45-20 l
+2020-05-28.23-45-25 l
+2020-05-28.23-45-29 rm train_webnlg_baseline.sh eval_webnlg_baseline.sh
+2020-10-03.23-08-37 l
+2020-10-03.23-09-42 l
+2020-10-03.23-10-18 vim ../wikidata_v2/train_graph_wikidata_pretraining.sh 
+2020-10-03.23-12-00 l
+2020-10-03.23-13-15 vim finetune_graph_webnlg_from_wikidata.sh
+2020-10-03.23-19-07 vim finetune_graph_webnlg_from_wikidata.sh
+2020-10-03.23-19-08 vim finetune_graph_webnlg_from_wikidata.sh
+2020-10-03.23-19-08 vim finetune_graph_webnlg_from_wikidata.sh
+2020-10-03.23-19-37 vim finetune_graph_webnlg_from_wikidata.sh
+2020-10-03.23-34-02 git pull
+2020-10-03.23-34-35 git status
+2020-10-03.23-36-10 l
+2020-10-05.15-15-41 l
