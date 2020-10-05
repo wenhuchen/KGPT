@@ -6,7 +6,7 @@ import sys
 import json
 from tqdm import trange, tqdm
 from torch.utils.data import DataLoader, RandomSampler, SequentialSampler
-from Model import TransformerDecoder, GatedTransformerDecoder, GraphGatedTransformerDecoder, FinegrainedGraphGatedTransformerDecoder
+from Model import TransformerDecoder, GatedTransformerDecoder, GraphGatedTransformerDecoder
 import argparse
 from DataLoader import *
 from transformers import BertTokenizer, GPT2Tokenizer, XLNetTokenizer

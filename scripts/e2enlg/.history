@@ -23,3 +23,10 @@
 2020-06-01.22-08-07 l
 2020-06-01.22-08-19 git commit -a -m 'adding script for e2e few shot'
 2020-06-01.22-08-24 git push
+2020-10-05.15-48-56 l
+2020-10-05.15-49-20 mv train_sequence_e2enlg_gpt2_fewshot.sh train_sequence_e2enlg_fewshot.sh
+2020-10-05.15-49-25 mv finetune_sequence_e2enlg_from_wikidata_gpt2_fewshot.sh finetune_sequence_e2enlg_from_wikidata_fewshot.sh
+2020-10-05.15-49-25 l
+2020-10-05.15-49-33 vim finetune_sequence_e2enlg_from_wikidata_fewshot.sh
+2020-10-05.16-02-11 l
+2020-10-05.16-02-21 vim eval_graph_e2enlg_all.sh

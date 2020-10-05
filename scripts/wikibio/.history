@@ -1,0 +1,93 @@
+2020-05-24.21-47-21 l
+2020-05-24.21-47-34 vim train_graph_wikibionlg_gpt2.sh
+2020-05-25.08-41-08 l
+2020-05-25.08-41-18 l ../
+2020-05-25.08-41-20 l ../
+2020-05-25.08-41-24 l ../../
+2020-05-25.08-42-13 l
+2020-05-25.08-42-22 cp finetune_gated_wikibionlg_gpt2.sh finetune_gated_wikibionlg_gpt2_few_shot.sh
+2020-05-25.08-43-24 vim finetune_gated_wikibionlg_gpt2_few_shot.sh
+2020-05-25.10-52-43 l
+2020-05-25.10-52-53 vim eval_gated_wikibionlg_gpt2.sh
+2020-05-25.10-52-58 bash scripts/wikibio/eval_gated_wikibionlg_gpt2.sh 3 visualize checkpoint_wikibionlg/checkpoint_finetune_wikibionlg_head8_layer5_GPT2_maxfact12_gated_fewshot0.001/model_ep80.pt
+2020-05-25.11-02-24 l
+2020-05-25.11-02-33 cp train_gated_wikibionlg_gpt2.sh train_gated_wikibionlg_gpt2_lower.sh
+2020-05-25.11-02-51 vim train_gated_wikibionlg_gpt2_lower.sh
+2020-05-25.11-03-57 l
+2020-05-25.11-04-27 vim train_gated_wikibionlg_gpt2_lower.sh
+2020-05-25.11-13-57 l
+2020-05-25.11-13-59 git add *.sh
+2020-05-25.11-14-19 git commit -a -m 'adding wikibio few shot experiments'
+2020-05-25.11-14-30 git push
+2020-05-25.11-44-23 l
+2020-05-25.11-44-36 vim train_gated_wikibionlg_gpt2_lower.sh
+2020-05-25.11-44-40 rm train_gated_wikibionlg_gpt2_lower.sh
+2020-05-25.11-44-40 l
+2020-05-25.11-44-49 cp train_gated_wikibionlg_gpt2.sh train_gated_wikibionlg_gpt2_few_shot.sh
+2020-05-25.11-45-17 vim train_gated_wikibionlg_gpt2_few_shot.sh
+2020-05-25.11-45-32 vim train_gated_wikibionlg_gpt2_few_shot.sh
+2020-05-26.08-45-16 l
+2020-05-26.08-54-23 l
+2020-05-26.08-54-33 vim finetune_gated_wikibionlg_gpt2.sh
+2020-05-26.13-38-35 l
+2020-05-26.13-38-41 vim finetune_gated_wikibionlg_gpt2.sh
+2020-05-26.13-38-47 vim train_gated_wikibionlg_gpt2.sh
+2020-05-26.13-38-53 vim finetune_gated_wikibionlg_gpt2.sh
+2020-05-26.13-39-00 vim finetune_gated_wikibionlg_gpt2.sh
+2020-05-26.13-39-08 vim finetune_gated_wikibionlg_gpt2.sh
+2020-05-26.13-39-14 grep "max_dec_len" *.sh
+2020-05-26.14-44-52 l
+2020-05-26.14-44-56 nvidia-smi 
+2020-05-28.00-25-43 l
+2020-05-28.00-25-49 l
+2020-05-28.00-25-54 cp finetune_graph_wikibionlg_gpt2_large_batch.sh finetune_graph_wikibionlg_gpt2.sh
+2020-05-28.00-26-15 vim finetune_graph_wikibionlg_gpt2.sh
+2020-05-28.12-23-55 l
+2020-05-28.12-24-12 vim train_gated_wikibionlg_gpt2_few_shot.sh
+2020-05-28.12-24-41 vim train_gated_wikibionlg_gpt2_few_shot.sh
+2020-05-28.12-25-23 vim train_gated_wikibionlg_gpt2_few_shot.sh
+2020-05-28.22-35-35 l
+2020-05-28.23-45-01 l
+2020-05-28.23-45-04 l
+2020-10-05.16-01-58 l
+2020-10-05.16-03-01 l
+2020-10-05.16-03-22 mv train_gated_wikibionlg_gpt2_few_shot.sh train_sequence_wikibionlg_few_shot.sh
+2020-10-05.16-03-24 l
+2020-10-05.16-03-29 l
+2020-10-05.16-03-29 l
+2020-10-05.16-03-50 l
+2020-10-05.16-04-03 l ../e2enlg/
+2020-10-05.16-04-10 mv 
+2020-10-05.16-04-20 mv finetune_sequence_wikibionlg.sh finetune_sequence_wikibionlg_from_wikidata.sh
+2020-10-05.16-04-42 mv finetune_graph_wikibionlg.sh finetune_graph_wikibionlg_from_wikidata.sh
+2020-10-05.16-04-43 l
+2020-10-05.16-04-50 l
+2020-10-05.16-04-50 l
+2020-10-05.16-04-59 rm -r finetune_graph_wikibionlg_large_batch.sh
+2020-10-05.16-05-00 l
+2020-10-05.16-05-13 mv 
+2020-10-05.16-05-20 mv 
+2020-10-05.16-05-40 vim finetune_graph_wikibionlg_from_wikidata.sh
+2020-10-05.16-05-48 vim finetune_graph_wikibionlg_gpt2.sh
+2020-10-05.16-05-48 l
+2020-10-05.16-05-52 rm -r finetune_graph_wikibionlg_gpt2.sh
+2020-10-05.16-05-53 l
+2020-10-05.16-06-06 vim finetune_sequence_wikibionlg_few_shot.sh
+2020-10-05.16-06-10 l
+2020-10-05.16-06-22 vim finetune_graph_wikibionlg_from_wikidata.sh
+2020-10-05.16-06-23 l
+2020-10-05.16-06-50 vim train_sequence_wikibionlg_few_shot.sh
+2020-10-05.16-06-55 grep "layers" *.sh
+2020-10-05.16-07-05 vim eval_graph_wikibionlg.sh
+2020-10-05.16-07-15 vim eval_sequence_wikibionlg.sh
+2020-10-05.16-07-35 vim finetune_sequence_wikibionlg_from_wikidata.sh
+2020-10-05.16-07-47 vim train_graph_wikibionlg.sh
+2020-10-05.16-07-56 vim train_sequence_wikibionlg.sh
+2020-10-05.16-08-03 grep additional *.sh
+2020-10-05.16-08-08 grep addition *.sh
+2020-10-05.16-08-11 grep gated *.sh
+2020-10-05.16-08-12 l
+2020-10-05.16-08-17 l
+2020-10-05.16-08-18 l
+2020-10-05.16-09-20 l
+2020-10-05.16-09-26 vim train_sequence_wikibionlg.sh
