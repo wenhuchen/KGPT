@@ -11,7 +11,7 @@ unzip dataset.zip
 
 ## Download Pre-trained KGPT model
 ```
-https://kgpt.s3-us-west-2.amazonaws.com/models.zip
+wget https://kgpt.s3-us-west-2.amazonaws.com/models.zip
 unzip models.zip
 ```
 
