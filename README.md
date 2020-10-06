@@ -81,3 +81,25 @@ For example, the model at 20th epoch arrives the best score, then you will outpu
   ```
     bash scripts/webnlg/eval_graph_webnlg_all.sh 0 challenge checkpoint_webnlg/checkpoint_finetune_graph_head8_layer6_GPT2_maxfact12/model_ep20.pt
   ```
+
+## Evaluation
+We use the standard e2e evaluation pipeline
+```
+  https://github.com/wenhuchen/Data-to-text-Evaluation-Metric.git
+  cd Data-to-text-Evaluation-Metric
+  ./measure_scores.py ../dataset/webnlg/test.txt ../checkpoint_webnlg/checkpoint_finetune_graph_head8_layer6_GPT2_maxfact12/model_ep20.txt
+```
+
+## Citation
+If you find this project useful, please cite it using the following format
+```
+  @article{chen2020kgpt,
+  title={KGPT: Knowledge-Grounded Pre-Training for Data-to-Text Generation},
+  author={Chen, Wenhu and Su, Yu and Yan, Xifeng and Wang, William},
+  journal={Proceedings of EMNLP 2020},
+  year={2020}
+}
+```
+
+## Q\&A
+If you have any questions about the paper and the github, please feel free to leave an issue or send me an email.
