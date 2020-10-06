@@ -1,4 +1,4 @@
-# KGPT
+# KGPT: Knowledge-Grounded Pre-Training
 Code and Data for EMNLP2020 Paper "KGPT: Knowledge-Grounded Pre-Training for Data-to-Text Generation", this paper proposes a distanly-supervised pre-trainning algorithm to train general data-to-text architectures: 1) sequence KGPT and 2) Graph KGPT. Both of the two models can be applied to a wide range of data-to-text generation tasks. We crawl 7 million distanly-supervised data-to-text data from Wikipedia to pre-train this generation and finetune it on the downstream tasks. The finetuned model can achieve SOTA on multiple datasets and the improvements under few-shot setting are especially dramatic.
 
 <p align="center">
@@ -15,6 +15,11 @@ Graph Encoder:
 <img src="graph-encoder.png" width="700">
 </p>
 
+## Requirements:
+- [huggingface transformer 2.6.0](https://github.com/huggingface/transformers)
+- [pytorch 1.4.0](https://pytorch.org/)
+- tensorboardX
+- tqdm
 
 ## Download Preprocessed Dataset
 ```
@@ -89,6 +94,14 @@ We use the standard e2e evaluation pipeline
   cd Data-to-text-Evaluation-Metric
   ./measure_scores.py ../dataset/webnlg/test.txt ../checkpoint_webnlg/checkpoint_finetune_graph_head8_layer6_GPT2_maxfact12/model_ep20.txt
 ```
+
+## Pre-training
+If you want to pre-train the model by yourself, please prepare as many GPUs as you can. Our project uses 8 TITAN RTX GPUs (24G memory) and pre-train on the KGText with batch size of 128 for roughly 10 days. The pre-training can be easily started with the following command:
+```
+  bash scripts/wikidata/train_sequence_wikidata_pretraining.sh 0,1,2,3,4,5,6,7
+```
+The best performance is normally achieved during 8-14th epoch, the model uses the default setting of 6 layers with 8 heads.
+
 
 ## Citation
 If you find this project useful, please cite it using the following format
