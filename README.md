@@ -80,11 +80,11 @@ Evaluate all the saved models on the validation set to select the best model.
 For example, the model at 20th epoch arrives the best score, then you will output prediction using the following command.
 ### Sequence Encoder
   ```
-    bash scripts/webnlg/eval_sequence_webnlg_all.sh 0 challenge checkpoint_webnlg/checkpoint_finetune_sequence_head8_layer6_GPT2_maxfact12/model_ep20.pt
+    bash scripts/webnlg/eval_sequence_webnlg.sh 0 challenge checkpoint_webnlg/checkpoint_finetune_sequence_head8_layer6_GPT2_maxfact12/model_ep20.pt
   ```
 ### Graph Encoder
   ```
-    bash scripts/webnlg/eval_graph_webnlg_all.sh 0 challenge checkpoint_webnlg/checkpoint_finetune_graph_head8_layer6_GPT2_maxfact12/model_ep20.pt
+    bash scripts/webnlg/eval_graph_webnlg.sh 0 challenge checkpoint_webnlg/checkpoint_finetune_graph_head8_layer6_GPT2_maxfact12/model_ep20.pt
   ```
 
 ## Evaluation
