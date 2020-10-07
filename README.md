@@ -1,5 +1,5 @@
 # KGPT: Knowledge-Grounded Pre-Training
-Code and Data for EMNLP2020 Paper "KGPT: Knowledge-Grounded Pre-Training for Data-to-Text Generation", this paper proposes a distanly-supervised pre-trainning algorithm to train general data-to-text architectures: 1) sequence KGPT and 2) Graph KGPT. Both of the two models can be applied to a wide range of data-to-text generation tasks. We crawl 7 million distanly-supervised data-to-text data from Wikipedia to pre-train this generation and finetune it on the downstream tasks. The finetuned model can achieve SOTA on multiple datasets and the improvements under few-shot setting are especially dramatic.
+Code and Data for EMNLP2020 Paper [KGPT: Knowledge-Grounded Pre-Training for Data-to-Text Generation](https://arxiv.org/abs/2010.02307), this paper proposes a distanly-supervised pre-trainning algorithm to train general data-to-text architectures: 1) sequence KGPT and 2) Graph KGPT. Both of the two models can be applied to a wide range of data-to-text generation tasks. We crawl 7 million distanly-supervised data-to-text data from Wikipedia to pre-train this generation and finetune it on the downstream tasks. The finetuned model can achieve SOTA on multiple datasets and the improvements under few-shot setting are especially dramatic.
 
 <p align="center">
 <img src="overview.png" width="350">
