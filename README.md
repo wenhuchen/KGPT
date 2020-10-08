@@ -26,6 +26,11 @@ Graph Encoder:
 wget https://kgpt.s3-us-west-2.amazonaws.com/dataset.zip
 unzip dataset.zip
 ```
+If you want to do pre-training, pleaase download the WikiData Graph as well
+```
+wget https://kgpt.s3-us-west-2.amazonaws.com/preprocess.zip
+unzip preprocess.zip
+```
 
 ## Download Pre-trained KGPT model
 ```
