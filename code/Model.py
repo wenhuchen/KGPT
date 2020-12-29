@@ -798,6 +798,51 @@ class GraphGatedTransformerDecoder(nn.Module):
 
         return tgt_seq[:, 1:]
 
+    def beam_search(self, inputs, tokenizer, n_bm, max_token_seq_len=30, banwords=[]):
+        with torch.no_grad():
+            #-- Repeat data for beam search
+            n_inst, len_s = inputs[0].size()
+
+            new_inputs = []
+            for _ in inputs:
+                if len(_.shape) == 2:
+                    new_inputs.append(_.repeat(1, n_bm).view(n_inst * n_bm, len_s))
+                else:
+                    new_inputs.append(_.repeat(1, n_bm, 1).view(n_inst * n_bm, len_s, len_s))
+            inputs = new_inputs
+
+            #-- Prepare beams
+            inst_dec_beams = [Beam(n_bm, tokenizer.pad_token_id, tokenizer.bos_token_id, tokenizer.eos_token_id, device=inputs[0].device) for _ in range(n_inst)]
+
+            #-- Bookkeeping for active or not
+            active_inst_idx_list = list(range(n_inst))
+            inst_idx_to_position_map = get_inst_idx_to_tensor_position_map(active_inst_idx_list)
+
+            #-- Decode
+            for len_dec_seq in range(1, max_token_seq_len + 1):
+                active_inst_idx_list = beam_decode_step(self, inst_dec_beams, len_dec_seq, active_inst_idx_list,
+                                                        inputs, inst_idx_to_position_map, n_bm, banwords)
+
+                if not active_inst_idx_list:
+                    break  # all instances have finished their path to <EOS>
+
+                inputs, inst_idx_to_position_map = collate_active_info(inputs, inst_idx_to_position_map, active_inst_idx_list, n_bm)
+
+            batch_hyp, batch_scores = collect_hypothesis_and_scores(tokenizer.pad_token_id, inst_dec_beams, n_bm)
+
+            result = []
+            for _ in batch_hyp:
+                finished = False
+                for r in _:
+                    if len(r) >= 8:
+                        result.append(r)
+                        finished = True
+                        break
+                if not finished:
+                    result.append(_[0])
+
+            return result
+
 
 def get_inst_idx_to_tensor_position_map(inst_idx_list):
     ''' Indicate the position of an instance in a tensor. '''
