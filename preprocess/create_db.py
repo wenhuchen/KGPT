@@ -1,6 +1,6 @@
 import json
 import sys
-from preprocess.Database import MyDatabase
+from Database import MyDatabase
 
 with open('properties.json', 'r') as f:
     properties = json.load(f)
@@ -10,7 +10,7 @@ db.create(True, 'Entities', [('id', 'TEXT'), ('label', 'TEXT'), ('description', 
 db.create(True, 'Properties', [('property_id', 'TEXT'), ('label', 'TEXT'), ('description', 'TEXT')])
 db.create(True, 'Relations', [('head_id', 'TEXT'), ('property', 'TEXT'), ('target', 'TEXT')])
 
-with open('WikiData/summarized.txt', 'r') as f:
+with open('summarized.txt', 'r') as f:
     for i, line in enumerate(f):
         data = json.loads(line.strip())
         if data[0].startswith('Q'):
