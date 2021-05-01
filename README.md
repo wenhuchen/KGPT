@@ -100,13 +100,20 @@ We use the standard e2e evaluation pipeline
   ./measure_scores.py ../dataset/webnlg/test.txt ../checkpoint_webnlg/checkpoint_finetune_graph_head8_layer6_GPT2_maxfact12/model_ep20.txt
 ```
 
+## Reproducing our results
+We have released our fine-tuned models in [Google Drive](https://drive.google.com/file/d/1ABl4By9oxU8eFo212jXJ2b2gem8Y2a02/view?usp=sharing).
+You can simply type in the following command to generate the decoded text file, which replicates the reported score in the paper.
+```
+bash scripts/webnlg/eval_sequence_webnlg.sh 0 test checkpoint_webnlg/checkpoint_finetune_sequence_head8_layer6_GPT2_maxfact12_from_ep14/model_ep30.pt
+```
+
+
 ## Pre-training
 If you want to pre-train the model by yourself, please prepare as many GPUs as you can. Our project uses 8 TITAN RTX GPUs (24G memory) and pre-train on the KGText with batch size of 128 for roughly 10 days. The pre-training can be easily started with the following command:
 ```
   bash scripts/wikidata/train_sequence_wikidata_pretraining.sh 0,1,2,3,4,5,6,7
 ```
 The best performance is normally achieved during 8-14th epoch, the model uses the default setting of 6 layers with 8 heads.
-
 
 ## Citation
 If you find this project useful, please cite it using the following format
